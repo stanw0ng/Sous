@@ -8,6 +8,8 @@ import RecipeEditModeProvider  from './hooks/providers/recipeEditMode';
 
 {/*Page Components*/ }
 
+import Home from './components/pages/Home';
+
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 
@@ -31,7 +33,6 @@ import Profile from './components/pages/Profile';
 import Inbox from './components/pages/Inbox';
 
 {/*Single Components*/}
-import MyRecipes from './components/pages/MyRecipes';
 import Template from './components/Template';
 
 const App = function() {
@@ -45,6 +46,8 @@ const App = function() {
           <Template>
 
             <Routes>
+
+              <Route path='/' element={<Home/>} />
 
               <Route path='/recipes'>
                 <Route index element={<RecipesList />}/>
