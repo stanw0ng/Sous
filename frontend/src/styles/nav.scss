@@ -14,15 +14,21 @@
     align-items: center;
     justify-content: space-around;
 
+    h2 {
+      text-align: center;
+    }
+
     a {
       display: flex;
       color: $secondary-color1;
       font-size: 1em;
+      align-items: center;
+      justify-content: center;
     }
     
     a:hover{
       font-weight: 900;
-    }  
+    }
   }
 }
 

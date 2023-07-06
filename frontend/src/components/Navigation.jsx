@@ -6,19 +6,19 @@ import UnreadMessagesContext from "../hooks/providers/UnreadMessagesProvider";
 
 const Navigation = function() {
   const userId = parseInt(localStorage.getItem('userId'), 10);
-  
+
   const {
     state,
     getUserById,
   } = useApplicationData();
 
-  const { unreadMessages, getUnreadMessagesByUserID, loading } = useContext(UnreadMessagesContext)
+  const { unreadMessages, getUnreadMessagesByUserID, loading } = useContext(UnreadMessagesContext);
 
   useEffect(() => {
-    if(userId){
-        getUserById(userId);
-        getUnreadMessagesByUserID(userId);
-      }
+    if (userId) {
+      getUserById(userId);
+      getUnreadMessagesByUserID(userId);
+    }
   }, [userId]);
 
   const { user } = state;
@@ -29,15 +29,21 @@ const Navigation = function() {
       <div className="sideview">
 
         <div className="welcome-msg">
-            {!userId && <h2><Link to={'/login'}>Login</Link></h2>}
-            {!userId && <h2><Link>Hello</Link></h2>}
-            {userId &&
-              <h2><Link to={`/profile/${user.id}`}>
-                Hello, {user.first_name}
-              </Link> </h2>}
-            {unreadMessages && unreadMessages > 0 && <span>You have {unreadMessages} unread messages!</span>}
+          {!userId && <h2><Link to={'/login'}>Login</Link></h2>}
+          {!userId && <h2><Link>Welcome to Sous</Link></h2>}
+          {userId &&
+            <h2><Link to={`/profile/${user.id}`}>
+              Hello, {user.first_name}
+            </Link> </h2>}
+          {unreadMessages !== null ? (
+            unreadMessages > 0 ? (
+              <span>You have {unreadMessages} unread messages!</span>
+            ) : (
+              <span>You are all caught up!</span>
+            )
+          ) : null}
         </div>
-        
+
         <h2><Link to={'/recipes'}>My Recipes</Link></h2>
         <h2><Link to={'/books'}>My Books</Link></h2>
         <h2><Link to={'/grocerylists'}>Grocery Lists</Link></h2>
