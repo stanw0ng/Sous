@@ -68,14 +68,6 @@ const GroceryList = function(props) {
           </table>
         </div>
       </div>
-      {userId && <div className="control-buttons">
-        <SystemMessage
-          show={isItemSaved}
-          message={"Added to grocery list successfully"}
-          type="success"
-          onShowMessage={handleShowMessage} />
-        <button onClick={(event) => handleAddGrocerylist()}>Add to Grocery Lists</button>
-      </div>}
     </article>
   );
 };

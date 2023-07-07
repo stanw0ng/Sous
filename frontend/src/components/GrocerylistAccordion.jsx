@@ -112,6 +112,12 @@ const GrocerylistAccordion = function(props) {
   return (
     <article className="grocerylist-accordions-wrapper">
 
+      <div className="add-new-grocerylist">
+        <Popup popupMessage="Create a Grocery List">
+          <CreateGrocerylist userId={userId} />
+        </Popup>
+      </div>
+
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-form">
@@ -166,7 +172,7 @@ const GrocerylistAccordion = function(props) {
             {selected.includes(grocerylist.id) && (
               <div>
 
-                <Popup popupMessage={"+"}>
+                <Popup popupMessage={"Add Item +"}>
                   <>
                     <form className="form-container">
                       <label htmlFor="name">Name:</label>
@@ -216,15 +222,7 @@ const GrocerylistAccordion = function(props) {
       ))
       }
 
-      < div className="add-new-grocerylist" >
-
-        <Popup popupMessage="Create a Grocery List">
-
-          <CreateGrocerylist userId={userId} />
-
-        </Popup>
-      </div >
-    </article >
+    </article>
   );
 };
 

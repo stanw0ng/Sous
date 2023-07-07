@@ -5,19 +5,16 @@
   right: 15px;
   width: 6rem;
   height: 3rem;
-  border-radius: .5rem;
-  background-color: #333;
-  color: #fff;
   font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
   transition: opacity 0.3s;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-button.show {
-  display: block;
-}
-
-.top-button:hover {
-  background-color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

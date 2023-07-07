@@ -1,10 +1,10 @@
 .grocerylist-accordion {
   color: $secondary-color1;
-  width: 90%;
-  background: $primary-color1;
-  padding: 1.5rem;
-  margin: .5rem 0;
-  border-radius: .5rem;
+  width: 100%;
+  background: $primary-color4;
+  padding: 1.5rem 0;
+  border-top: 1px solid $secondary-color2;
+  border-bottom: 1px solid $secondary-color2;
 
   h1 {
     font-size: 2rem;
@@ -19,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2.5em;
 
     .banner-right {
       display: flex;

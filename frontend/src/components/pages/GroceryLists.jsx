@@ -5,6 +5,7 @@ const GroceryLists = function(props) {
 
   return (
     <article className="grocery-lists">
+      <h1>My Grocery Lists</h1>
       <GrocerylistAccordion/>
         
     </article>

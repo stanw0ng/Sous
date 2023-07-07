@@ -1,5 +1,5 @@
 .nav {
-  width: 15em;
+  width: 18em;
   background-color: $primary-color4;
   display: flex;
   flex-direction: column;
@@ -33,9 +33,10 @@
 }
 
 .logo {
+  margin: .5em .5em .25em .5em;
   will-change: filter;
   transition: filter 300ms;
-  font-size: 4em;
+  font-size: 5em;
 }
 
 .logo a {

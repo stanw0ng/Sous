@@ -36,10 +36,14 @@ const Navigation = function() {
               Hello, {user.first_name}
             </Link> </h2>}
           {unreadMessages !== null ? (
-            unreadMessages > 0 ? (
-              <span>You have {unreadMessages} unread messages!</span>
+            unreadMessages === 1 ? (
+              <span>You have 1 unread message</span>
             ) : (
-              <span>You are all caught up!</span>
+              unreadMessages > 0 ? (
+                <span>You have {unreadMessages} unread messages</span>
+              ) : (
+                <span>You are all caught up :)</span>
+              )
             )
           ) : null}
         </div>

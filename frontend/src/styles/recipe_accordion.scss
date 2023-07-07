@@ -84,20 +84,39 @@
   
       .control-buttons {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         margin-bottom: 2em;
 
           button{
             height: 3rem;
             background-color: transparent;
-            border: 2px solid;
-            border-radius: 1rem;
+            border: 1px solid;
 
             &:hover{
               background-color: $secondary-color1;
               color: $primary-color1;
             }
           }
+
+        .book-select {
+
+          h3 {
+            margin-top: 0;
+          }
+
+          div {
+            display: flex;
+            gap: 1em;
+
+            select {
+              background-color: $primary-color3;
+              padding: 0 1em;
+              width: 100%;
+              border: 1px solid $secondary-color1;
+            }
+          }
+
+        }
       }
     }
   }

@@ -1,27 +1,45 @@
-.recipe {
+.recipe-box {
   display: flex;
-  justify-content: center;
 }
 
 .recipe-title {
-  align-self: center;
+  align-self: right;
   font-family: $font1;
+  font-size: 3em;
+  margin: .25em 0;
 }
 
-.recipe:nth-child(odd) {
+.recipe-box:nth-child(odd) {
   background-color: $primary-color2;
 }
 
-.recipe-text {
-  color: $secondary-color1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  margin: 10px;
+.recipe-img {
+  height: 100vh;
+  object-fit: cover;
 }
 
-.recipe-text a {
+.control-buttons {
+
+  display: flex;
+  gap: 1em;
+
+  .a{
+    background-color: $primary-color3;
+  }
+}
+
+.recipe-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: cen;
+  align-self: left;
+  width: 50%;
+  height: 100vh;
+  text-align: left;
+  overflow-y: scroll;
+  margin: 0 2em;
+
+  a {
   color: $secondary-color1;
   display: flex;
   flex-direction: column;
@@ -29,22 +47,64 @@
   justify-content: space-between;
   width: 50%;
   margin: 10px;
-}
+  }
 
-.recipe-img {
-  width: 50%;
-  padding-left: 1em;
-  object-fit: cover;
-}
+  ul {
+    padding-left: 1.25em;
+  }
+  
+  ol {
+    padding-left: 1.25em;
+  }
 
-.control-buttons button {
-  background-color: $primary-color3;
-}
+  .subtitle {
+    margin: .5em 0 .5em 0;
+  }
 
-.recipe-text .author {
-  display: flex;
-  justify-content: right;
-  align-self: right;
-  width: 100%;
-  text-align: right;
+  .author {
+    display: flex;
+    align-items: center;
+    margin: .5em 0;
+  
+    a{
+      margin: 0;
+      margin-left: .5em;
+    }
+  }
+
+  .split-information {
+    display: flex;
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+  }
+  
+  .ingredient-block {
+    flex-basis: 50%;
+    position: relative;
+  }
+  
+  .ingredient-block::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-right: 1px dashed;
+    transform: translateX(50%);
+    margin: auto 2em;
+  }
+  
+  .recipe-metadata {
+    flex-basis: 50%;
+  }
+  
+  
+
+  .control-buttons {
+    margin: 1em 0;
+
+    button {
+      background-color: inherit;
+    }
+  }
 }

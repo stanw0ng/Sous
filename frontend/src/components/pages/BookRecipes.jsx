@@ -49,7 +49,7 @@ const BooksRecipes = function(props) {
       {bookState &&
         <article className="recipes-list">
           <h1>{`${bookState.book.name}`}</h1>
-          <UserInfo userId={bookState.user.id}/>
+          <div><span>By </span><UserInfo userId={bookState.user.id}/></div>
           <p>{bookState.book.description}</p>
 
           {bookState.recipes.length === 0 && <h3>This Book has no Recipes!</h3>}

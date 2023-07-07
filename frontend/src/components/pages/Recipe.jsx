@@ -8,6 +8,8 @@ import RecipeEditModeProvider from "../../hooks/providers/recipeEditMode";
 import EditRecipe from "./EditRecipe";
 import UserInfo from "../UserInfo";
 
+import "../../styles/recipe.scss";
+
 const Recipe = function(props) {
   const { id } = useParams();
   const userId = localStorage.getItem('userId');
@@ -57,36 +59,43 @@ const Recipe = function(props) {
   }
 
   return (
-    <article className="recipe">
+    <article className="recipe-box">
 
       <div className="recipe-text">
         <h2 className="recipe-title">{recipe.name}</h2>
-        <p className="author"><UserInfo userId={user.id} /></p>
+        <div className="author"><span>By: </span><UserInfo userId={user.id} /></div>
         <h3 className="subtitle">Description</h3>
         <p>{recipe.description}</p>
-        <h3 className="subtitle">Ingredients</h3>
-        <ul>
-          {ingredients.map((ingredient, i) => (<li key={i}>{ingredient.name}: {ingredient.quantity} {ingredient.units}</li>))}
-        </ul>
-        <ul>
 
-          {userId && <div className="control-buttons">
-            <SystemMessage
-              show={isItemSaved}
-              message={"Added to grocery list successfully"}
-              type="success"
-              onShowMessage={handleShowMessage} />
-            <button onClick={(event) => handleAddGrocerylist()}>Add to Grocery Lists</button>
-          </div>}
+        <div className="split-information">
+          <div className="ingredient-block">
+            <h3 className="subtitle">Ingredients</h3>
+            <ul>
+              {ingredients.map((ingredient, i) => (<li key={i}>{ingredient.name}: {ingredient.quantity} {ingredient.units}</li>))}
+            </ul>
+            {userId && <div className="control-buttons">
+                <SystemMessage
+                  show={isItemSaved}
+                  message={"Added to grocery list successfully"}
+                  type="success"
+                  onShowMessage={handleShowMessage} />
+                <button onClick={(event) => handleAddGrocerylist()}>Add to Grocery Lists</button>
+              </div>}
+          </div>
+          <div className="recipe-metadata">
+            <h3>Notes</h3>
+            <ul>
+              <li>Estimate cooktime: {recipe.cooktime_minutes} min</li>
+              {recipe.is_vegetarian && <li>Vegetarian</li>}
+              {recipe.is_vegan && <li>Vegan</li>}
+              {recipe.is_lowcarb && <li>Low Carb</li>}
+              {recipe.is_lactosefree && <li>Lactose Free</li>}
+              {recipe.is_glutenfree && <li>Gluten Free</li>}
+              {recipe.is_nutfree && <li>Nut Free</li>}
+            </ul>
+          </div>
+        </div>
 
-          <li>Estimate cooktime: {recipe.cooktime_minutes} min</li>
-          {recipe.is_vegetarian && <li>Vegetarian</li>}
-          {recipe.is_vegan && <li>Vegan</li>}
-          {recipe.is_lowcarb && <li>Low Carb</li>}
-          {recipe.is_lactosefree && <li>Lactose Free</li>}
-          {recipe.is_glutenfree && <li>Gluten Free</li>}
-          {recipe.is_nutfree && <li>Nut Free</li>}
-        </ul>
         <h3 className="subtitle">Directions</h3>
         <ol>
           {recipe.directions.map((direction, i) => (<li key={i}> {direction} </li>))}

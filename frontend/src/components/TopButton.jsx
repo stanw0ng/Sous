@@ -42,7 +42,7 @@ const TopButton = ({ contentContainerRef }) => {
       className={`top-button ${showButton ? "show" : ""}`}
       onClick={scrollToTop}
     >
-      &#x2191;
+    Top
     </button>
   );
 };

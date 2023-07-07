@@ -12,8 +12,6 @@ const AddRecipeForm = function(props) {
     props.addRecipe(selected_id, recipeId);
     props.closePopup();
   };
-  
-  console.log("☮", props.userBooks)
 
   return (
     <>
@@ -21,18 +19,22 @@ const AddRecipeForm = function(props) {
         <h3>
           <label htmlFor="books">Choose a book to add Recipe to:</label>
         </h3>
-        <select
-          name="books"
-          id="books"
-          onChange={(event) => setSelectedBookId(event.target.value)}
-        >
-          {props.userBooks.map((book) => (
-            <option key={book.name} value={book.id}>
-              {book.name}
-            </option>
-          ))}
-        </select>
-        <button onClick={handleAddRecipe}>Submit</button>
+
+        <div>
+          <select
+            name="books"
+            id="books"
+            onChange={(event) => setSelectedBookId(event.target.value)}
+          >
+            {props.userBooks.map((book) => (
+              <option key={book.name} value={book.id}>
+                {book.name}
+              </option>
+            ))}
+          </select>
+          <button onClick={handleAddRecipe}>Submit</button>
+        </div>
+        
       </div>
     </>
   );

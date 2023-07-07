@@ -12,8 +12,8 @@
 }
 
 .popup-form {
-  background-color: #3d3434;
-  border: 1px solid #cccccc;
+  background-color: $primary-color2;
+  border: 1px solid $secondary-color1;
   padding: 20px;
   width: 400px;
   max-width: 90%;
@@ -21,7 +21,7 @@
 }
 
 .popup-form p {
-  color: #ffffff;
+  color: $primary-color1;
   font-size: 1rem;
   text-align: center;
   margin-top: 10px;
@@ -46,6 +46,8 @@
 .popup-form textarea {
   padding: 8px;
   margin-bottom: 10px;
+  color: $secondary-color1;
+  background-color: $primary-color3;
 }
 
 .popup-form textarea {
@@ -54,9 +56,7 @@
 }
 
 .popup-form button {
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
+  border: 1px solid;
   cursor: pointer;
 }
 
@@ -65,5 +65,5 @@
 }
 
 .popup-form button:hover {
-  background-color: #2a2b2c;
+  background-color: $primary-color3;
 }
