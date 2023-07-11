@@ -35,6 +35,11 @@
     }
   }
 
+  .toggle{
+    font-size: 3em;
+  }
+
+
   .btn-delete{
     color: $secondary-color1;
   }
@@ -62,6 +67,16 @@
   &:hover {
     background: $primary-color1;
     cursor: pointer;
+  }
+  
+  .generic-popup{
+    button{
+      margin: 1em 0 0 2em;
+    }
+  }
+
+  .control-buttons {
+    margin: 1em 0 0 2em;
   }
 }
 

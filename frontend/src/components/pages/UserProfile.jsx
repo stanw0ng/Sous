@@ -20,7 +20,7 @@ const UserProfile = function(props) {
 
   return (
     <article className="profile">
-      <h1>{user.first_name}'s' Profile</h1>
+      <h1>{user.first_name}'s Profile</h1>
       <table>
         <thead>
           <tr>

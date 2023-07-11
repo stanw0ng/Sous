@@ -1,0 +1,45 @@
+.message-accordion{
+
+  position: relative;;
+  color: $secondary-color1;
+  width: 100%;
+  background: $primary-color4;
+  padding: 1.5rem 0;
+  border-top: 1px solid $secondary-color1;
+  border-bottom: 1px solid $secondary-color1;
+  border-radius: 0;
+  margin: 0;
+
+  .toggle{
+    font-size: 3em;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+
+    .banner-right {
+      display: flex;
+      gap: 2em;
+      align-items: center;
+
+      .banner-image {
+        max-height: 150px;
+        width: 150px;
+        border-radius: .5rem;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .message-content {  
+    h2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1em;
+    }
+  }
+
+}

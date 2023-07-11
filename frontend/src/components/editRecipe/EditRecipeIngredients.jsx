@@ -39,7 +39,7 @@ const EditRecipeIngredients = function(props) {
           );
         })}
       </ul>
-      <button onClick={addIngredient}>+ Add Ingredient +</button>
+      <button onClick={addIngredient}> Add Ingredient +</button>
       <button onClick={recipeSummaryView}>Back</button>
       <button onClick={recipeDirectionsView}>Next</button>
     </>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import MessageAccordion from "../MessageAccordion.jsx";
 import useApplicationData from "../../hooks/useApplicationData";
 
+import "../../styles/inbox.scss";
+
 const Inbox = function(props) {
   const {
     state,
@@ -39,6 +41,7 @@ const Inbox = function(props) {
 
   return (
     <article className="inbox">
+      <h1>Inbox</h1>
       <div>
         <button onClick={handlesReceivedMessages} disabled={showReceivedMessages}>
           Received

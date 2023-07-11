@@ -1,22 +1,110 @@
 .recipe-box {
   display: flex;
+
+  .recipe-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: cen;
+    align-self: left;
+    flex-basis: 50%;
+    height: 100vh;
+    text-align: left;
+    overflow-y: scroll;
+    margin: 0 2em;
+  
+    a {
+    color: $secondary-color1;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: space-between;
+    width: 50%;
+    margin: 10px;
+    }
+  
+    ul {
+      padding-left: 1.25em;
+    }
+    
+    ol {
+      padding-left: 1.25em;
+    }
+  
+    .subtitle {
+      margin: .5em 0 .5em 0;
+    }
+  
+    .author {
+      display: flex;
+      align-items: center;
+      margin: .5em 0;
+    
+      a{
+        margin: 0;
+        margin-left: .5em;
+      }
+    }
+  
+    .split-information {
+      display: flex;
+      border-top: 1px dashed;
+      border-bottom: 1px dashed;
+    }
+    
+    .ingredient-block {
+      flex-basis: 50%;
+      position: relative;
+    }
+    
+    .ingredient-block::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      border-right: 1px dashed;
+      transform: translateX(50%);
+      margin: auto 2em;
+    }
+    
+    .recipe-metadata {
+      flex-basis: 50%;
+    }
+  
+    .control-buttons {
+      margin: 1em 0;
+  
+      button {
+        background-color: inherit;
+      }
+    }
+  }
+
+  .image-container {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .recipe-img {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+  }
 }
 
 .recipe-title {
   align-self: right;
   font-family: $font1;
   font-size: 3em;
-  margin: .25em 0;
+  margin: 1em 0 .5em 0;
 }
 
 .recipe-box:nth-child(odd) {
   background-color: $primary-color2;
 }
 
-.recipe-img {
-  height: 100vh;
-  object-fit: cover;
-}
 
 .control-buttons {
 
@@ -25,86 +113,5 @@
 
   .a{
     background-color: $primary-color3;
-  }
-}
-
-.recipe-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: cen;
-  align-self: left;
-  width: 50%;
-  height: 100vh;
-  text-align: left;
-  overflow-y: scroll;
-  margin: 0 2em;
-
-  a {
-  color: $secondary-color1;
-  display: flex;
-  flex-direction: column;
-  align-items: right;
-  justify-content: space-between;
-  width: 50%;
-  margin: 10px;
-  }
-
-  ul {
-    padding-left: 1.25em;
-  }
-  
-  ol {
-    padding-left: 1.25em;
-  }
-
-  .subtitle {
-    margin: .5em 0 .5em 0;
-  }
-
-  .author {
-    display: flex;
-    align-items: center;
-    margin: .5em 0;
-  
-    a{
-      margin: 0;
-      margin-left: .5em;
-    }
-  }
-
-  .split-information {
-    display: flex;
-    border-top: 1px dashed;
-    border-bottom: 1px dashed;
-  }
-  
-  .ingredient-block {
-    flex-basis: 50%;
-    position: relative;
-  }
-  
-  .ingredient-block::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    border-right: 1px dashed;
-    transform: translateX(50%);
-    margin: auto 2em;
-  }
-  
-  .recipe-metadata {
-    flex-basis: 50%;
-  }
-  
-  
-
-  .control-buttons {
-    margin: 1em 0;
-
-    button {
-      background-color: inherit;
-    }
   }
 }

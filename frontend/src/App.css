@@ -16,14 +16,6 @@
   width: 80%;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 footer {
   display: flex;
   flex-direction: column;

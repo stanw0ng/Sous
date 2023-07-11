@@ -27,7 +27,7 @@ const EditRecipeDirections = function() {
           );
         })}
       </ul>
-      <button onClick={newRecipeDirection}>+ Add Direction +</button>
+      <button onClick={newRecipeDirection}>Add Direction +</button>
       <button onClick={recipeIngredientsView}>Back</button>
     </>
   );

@@ -70,7 +70,9 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  margin: 1em .5em;
 }
+
 
 button {
   border-radius: 8px;
@@ -93,12 +95,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-ul {
-  padding-left: 1.25em;
-}
-
-ol {
-  padding-left: 1.25em;
 }

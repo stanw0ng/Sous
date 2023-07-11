@@ -5,6 +5,7 @@ import "../styles/recipe_accordion.scss";
 import SendLinkForm from "./SendLinkForm";
 import Popup from "./Popup";
 import AddRecipeForm from "./AddRecipeForm";
+import Loop from "./LoopScroll";
 import UserInfo from "./UserInfo";
 
 const RecipeAccordion = ({ recipes, userId, deleteRecipe, createMessage, userBooks, addRecipe }) => {
@@ -44,8 +45,13 @@ const RecipeAccordion = ({ recipes, userId, deleteRecipe, createMessage, userBoo
     setRecipesState(recipesState.filter((recipe) => recipe.id !== id));
   };
 
+  const dataReady = recipes.length > 0; // Check if the books data is available
+  const parentHeight = document.querySelector('.recipe-accordions-wrapper')?.offsetHeight;
+
   return (
     <article className="recipe-accordions-wrapper">
+    {/* <h1>Explore New Recipes</h1> */}
+    {/* <Loop dataReady={dataReady} parentHeight={parentHeight}> */}
 
       {showSendPopup && (
         <div className="popup-overlay">
@@ -112,6 +118,7 @@ const RecipeAccordion = ({ recipes, userId, deleteRecipe, createMessage, userBoo
             
         </div>
       ))}
+      {/* </Loop> */}
     </article>
   );
 };

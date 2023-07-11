@@ -113,7 +113,9 @@ const Recipe = function(props) {
         </div>}
       </div>
 
-      <img src={recipe.image} alt={recipe.name} className="recipe-img" />
+      <div className="image-container">
+        <img src={recipe.image} alt={recipe.name} className="recipe-img" />
+      </div>
     </article>
   );
 

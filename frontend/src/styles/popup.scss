@@ -22,6 +22,16 @@
     max-height: 80%;
     overflow-y: auto;
     border-radius: 1rem;
+
+    h1 {
+      margin: .5em 0;
+      text-align: center;
+    }
+
+    ul{
+      list-style: none;
+      padding: 0;
+    }
   }
   
   .popup-form h3 {
@@ -121,8 +131,6 @@
     content: "";
     height: 24px;
     width: 24px;
-    left: 4px;
-    bottom: 4px;
     background-color: $secondary-color1;
     border-radius: 50%;
     transition: transform 0.4s;
@@ -135,7 +143,4 @@
   .switch-checkbox:checked + .switch-label .switch-slider:before {
     transform: translateX(24px);
   }
-  
-  
-
 }

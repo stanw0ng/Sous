@@ -4,6 +4,8 @@ import useApplicationData from "../../hooks/useApplicationData";
 import { useParams } from "react-router-dom";
 import UserInfo from "../UserInfo";
 
+import "../../styles/book-page.scss";
+
 const BooksRecipes = function(props) {
 
   const {
@@ -47,10 +49,13 @@ const BooksRecipes = function(props) {
   return (
     <>
       {bookState &&
-        <article className="recipes-list">
+        <article className="book-recipes-list">
           <h1>{`${bookState.book.name}`}</h1>
+
+          <div className="book-info">
           <div><span>By </span><UserInfo userId={bookState.user.id}/></div>
           <p>{bookState.book.description}</p>
+          </div>
 
           {bookState.recipes.length === 0 && <h3>This Book has no Recipes!</h3>}
           <button onClick={() => handleBookmark()}> Bookmark this Book </button>

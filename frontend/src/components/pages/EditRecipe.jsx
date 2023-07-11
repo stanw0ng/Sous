@@ -84,7 +84,7 @@ const EditRecipe = function() {
       {recipeEditMode === 'LOCKED' && <Link to={'/recipes'}><button>Back</button></Link>}
       {currentRecipe &&
         <>
-          <button onClick={handleSubmit}>Publish</button>
+          <button className="publish" onClick={handleSubmit}>Publish</button>
         </>
       }
 

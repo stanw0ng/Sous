@@ -7,6 +7,7 @@ th, td {
   color: $secondary-color1;
   padding: 12px;
   text-align: left;
+  border-top: 1px solid $primary-color1;
   border-bottom: 1px solid $primary-color1;
 }
 
@@ -14,11 +15,17 @@ th {
   background-color: $primary-color2;
 }
 
+tr {
+  justify-content: space-around;
+}
+
 tr:hover {
   background-color: $primary-color4;
 }
 
 .items-table {
-  width: 60%;
+  display: flex;
+  width: 90%;
+  padding: 0 2em;
 }
 
